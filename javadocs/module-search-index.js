@@ -1,1 +1,0 @@
-moduleSearchIndex = [{"l":"azaidi6.schedulingapp"}];updateSearchResults();
