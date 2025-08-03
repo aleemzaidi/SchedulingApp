@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="azaidi6.schedulingapp.controller.customerController">
+   <children>
+      <VBox prefHeight="500.0" prefWidth="800.0">
+         <children>
+            <TableView fx:id="customersTable" prefHeight="403.0" prefWidth="800.0" VBox.vgrow="ALWAYS">
+               <columns>
+                  <TableColumn fx:id="customerIdCol" prefWidth="50.0" text="ID" />
+                  <TableColumn fx:id="customerNameCol" prefWidth="100.0" text="Name" />
+                  <TableColumn fx:id="customerAddressCol" prefWidth="200.0" text="Address" />
+                  <TableColumn fx:id="customerPostalCodeCol" prefWidth="100.0" text="Postal Code" />
+                  <TableColumn fx:id="customerPhoneCol" prefWidth="100.0" text="Phone" />
+                  <TableColumn fx:id="customerDivisionCol" prefWidth="120.0" text="Division" />
+                  <TableColumn fx:id="customerCountryCol" prefWidth="100.0" text="Country" />
+               </columns></TableView>
+            <HBox alignment="BOTTOM_RIGHT" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <ButtonBar nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                    <buttons>
+                        <Button fx:id="deleteButton" alignment="CENTER" mnemonicParsing="false" onMouseClicked="#onDeleteButtonClicked" text="Delete" />
+                      <Button fx:id="updateButton" alignment="CENTER" mnemonicParsing="false" onMouseClicked="#onModifyButtonClicked" text="Update" />
+                        <Button fx:id="addButton" alignment="CENTER" mnemonicParsing="false" onMouseClicked="#onAddButtonClicked" text="Add" />
+                    </buttons>
+                  </ButtonBar>
+                  <Button fx:id="backButton" alignment="BOTTOM_RIGHT" mnemonicParsing="false" onMouseClicked="#onBackButtonClicked" text="Back" />
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="azaidi6.schedulingapp.controller.reportsController">
+   <children>
+      <TabPane prefHeight="500.0" prefWidth="800.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="reportTab1" text="Type/Month Report">
+               <content>
+                  <VBox alignment="CENTER" spacing="10.0">
+                     <children>
+                        <HBox alignment="CENTER" spacing="10.0" VBox.vgrow="ALWAYS">
+                           <children>
+                              <VBox spacing="10.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Label text="Appointments By Type" />
+                                    <TableView fx:id="appTypeTable" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                      <columns>
+                                        <TableColumn fx:id="appTypeCol" minWidth="150.0" prefWidth="190.0" text="Appointment Type" />
+                                        <TableColumn fx:id="appTypeQtyCol" minWidth="150.0" prefWidth="194.0" text="Quantity" />
+                                      </columns>
+                                    </TableView>
+                                 </children>
+                              </VBox>
+                              <VBox spacing="10.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Label text="Appointments By Month" />
+                                    <TableView fx:id="appMonthTable" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                      <columns>
+                                        <TableColumn fx:id="appMonthCol" prefWidth="190.0" text="Month" />
+                                        <TableColumn fx:id="appMonthQtyCol" prefWidth="194.0" text="Quantity" />
+                                      </columns>
+                                    </TableView>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <Button alignment="CENTER" mnemonicParsing="false" onMouseClicked="#onBackClicked" text="Back" />
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </VBox>
+               </content>
+            </Tab>
+          <Tab fx:id="reportTab2" text="Contact Schedule Report">
+               <content>
+                  <HBox>
+                     <children>
+                        <VBox alignment="CENTER" spacing="10.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <ComboBox fx:id="contactComboBox" onAction="#contactSelect" VBox.vgrow="ALWAYS" />
+                              <TableView fx:id="contactScheduleTable" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                <columns>
+                                  <TableColumn fx:id="appIdCol" prefWidth="50.0" text="ID" />
+                                  <TableColumn fx:id="appTitleCol" prefWidth="101.0" text="Title" />
+                                    <TableColumn fx:id="csAppTypeCol" prefWidth="116.0" text="Type" />
+                                    <TableColumn fx:id="appDescriptionCol" prefWidth="178.0" text="Description" />
+                                    <TableColumn fx:id="appStartDateTimeCol" minWidth="0.0" prefWidth="117.0" text="Start Date/Time" />
+                                    <TableColumn fx:id="appEndDateTimeCol" prefWidth="132.0" text="End Date/Time" />
+                                    <TableColumn fx:id="appCustomerIdCol" prefWidth="85.0" text="Customer ID" />
+                                </columns>
+                              </TableView>
+                              <Button mnemonicParsing="false" onMouseClicked="#onBackClicked" text="Back" />
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </content>
+            </Tab>
+            <Tab fx:id="reportTab3" text="Customers By Location Report">
+               <content>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <TableView fx:id="customersTable" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                <columns>
+                                  <TableColumn fx:id="appLocCol" prefWidth="364.0" text="Location" />
+                                  <TableColumn fx:id="appLocQuantityCol" minWidth="0.0" prefWidth="415.0" text="Quantity" />
+                                </columns>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </TableView>
+                              <Button mnemonicParsing="false" onMouseClicked="#onBackClicked" text="Back" />
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

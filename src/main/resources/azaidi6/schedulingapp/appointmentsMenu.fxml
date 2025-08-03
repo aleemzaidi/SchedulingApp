@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="azaidi6.schedulingapp.controller.appointmentController">
+   <children>
+      <VBox prefHeight="600.0" prefWidth="1100.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <RadioButton fx:id="allAppointments" onMouseClicked="#filterChange" mnemonicParsing="false" selected="true" text="All Appointments">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="filter" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="weekAppointments" onMouseClicked="#filterChange" mnemonicParsing="false" text="Week" toggleGroup="$filter">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </RadioButton>
+                  <RadioButton fx:id="monthAppointments" onMouseClicked="#filterChange" mnemonicParsing="false" text="Month" toggleGroup="$filter">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </RadioButton>
+               </children>
+            </HBox>
+            <TableView fx:id="appointmentsTable" prefHeight="359.0" prefWidth="849.0" VBox.vgrow="ALWAYS">
+               <columns>
+                  <TableColumn fx:id="appIdCol" prefWidth="50.0" text="ID" />
+                  <TableColumn fx:id="appTitleCol" prefWidth="117.0" text="Title" />
+                  <TableColumn fx:id="appDescriptionCol" prefWidth="179.0" text="Description" />
+                  <TableColumn fx:id="appLocationCol" prefWidth="104.0" text="Location" />
+                  <TableColumn fx:id="appContactCol" prefWidth="100.0" text="Contact" />
+                  <TableColumn fx:id="appTypeCol" prefWidth="99.0" text="Type" />
+                  <TableColumn fx:id="appStartDateTimeCol" prefWidth="121.0" text="Start Date/Time" />
+                  <TableColumn fx:id="appEndDateTimeCol" prefWidth="121.0" text="End Date/Time" />
+                  <TableColumn fx:id="appCustomerIdCol" prefWidth="97.0" text="Customer ID" />
+                  <TableColumn fx:id="appUserIdCol" prefWidth="84.0" text="User ID" />
+               </columns></TableView>
+            <HBox alignment="BOTTOM_RIGHT" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <ButtonBar nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                    <buttons>
+                        <Button fx:id="deleteButton" alignment="CENTER" mnemonicParsing="false" onMouseClicked="#onDeleteButtonClicked" text="Delete" />
+                      <Button fx:id="updateButton" onMouseClicked="#onUpdateButtonClicked" alignment="CENTER" mnemonicParsing="false" text="Update" />
+                        <Button fx:id="addButton" alignment="CENTER" mnemonicParsing="false" onMouseClicked="#onAddButtonClicked" text="Add" />
+                    </buttons>
+                  </ButtonBar>
+                  <Button fx:id="backButton" alignment="BOTTOM_RIGHT" mnemonicParsing="false" onMouseClicked="#onBackButtonClicked" text="Back" />
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>

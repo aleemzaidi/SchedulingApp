@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="azaidi6.schedulingapp.controller.menuController">
+   <children>
+      <VBox alignment="CENTER" layoutX="100.0" layoutY="25.0" prefHeight="200.0" prefWidth="200.0" spacing="10.0">
+         <children>
+            <Label fx:id="mainMenuLabel" text="Welcome Message" />
+            <Button fx:id="appointmentsButton" mnemonicParsing="false" onMouseClicked="#onAppointmentClicked" text="Appointments">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="customersButton" mnemonicParsing="false" onMouseClicked="#onCustomerClicked" text="Customers" />
+            <Button fx:id="reportsButton" layoutX="74.0" layoutY="111.0" mnemonicParsing="false" onMouseClicked="#onReportsClicked" text="Reports" />
+            <HBox alignment="CENTER" prefHeight="25.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="logoutButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onMouseClicked="#onLogoutClicked" prefWidth="75.0" text="Logout">
+                     <HBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="exitButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onMouseClicked="#onExitClicked" prefWidth="75.0" text="Exit">
+                     <HBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
