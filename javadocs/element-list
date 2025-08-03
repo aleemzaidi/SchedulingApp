@@ -1,0 +1,6 @@
+module:azaidi6.schedulingapp
+azaidi6.schedulingapp
+azaidi6.schedulingapp.controller
+azaidi6.schedulingapp.dao
+azaidi6.schedulingapp.helper
+azaidi6.schedulingapp.model
